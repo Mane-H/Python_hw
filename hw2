@@ -3,7 +3,7 @@
 l=[]
 while n // 10 != 0:
   if n % 10  != 0:
-    l. append(n % 10)
+    l.append (n % 10)
   n //= 10
 l.append(n)
 print (l)
@@ -68,8 +68,15 @@ while sum > 10:
   root = dig_sum(sum)
 print (root)
 
+##### Problem 5: number of divisors
+x = int(input())
+y = 0
+for i in range(1,x+1):
+  if x % i == 0:
+    y += 1
+print(y)
 
-##### Problem 5: Quadratic equation
+##### Problem 6: Quadratic equation
 
 import math
 a = int(input("input a: "))
