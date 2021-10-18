@@ -55,3 +55,38 @@ while n > 0 or root > 10 :
     n //= 10
 print(root)
 
+####### 2nd solution
+def dig_sum(n):
+  sum = 0
+  while n > 0:
+    sum += n % 10
+    n = n // 10
+  return sum
+
+sum = dig_sum(num)
+while sum > 10:
+  root = dig_sum(sum)
+print (root)
+
+
+##### Problem 5: Quadratic equation
+
+import math
+a = int(input("input a: "))
+b = int(input("input b: "))
+c = int(input("input c: "))
+
+
+if a == 0 :
+    print("Non-Quadratic equation")
+    if b == 0:
+        print("No solution")
+    else:
+        print("One solution: ", - c / b)
+else:
+    print("Quadratic equation")
+    d = b * b - 4 * a * c
+    print("Discriminant:", d)
+    x1 = (- b + math.sqrt(d)) / (2 * a)
+    x2 = (- b - math.sqrt(d)) / (2 * a)
+    print("Two solutions:", x1, x2)
